@@ -1,0 +1,369 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010103;
+    color: #00aeff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #0e0e0f;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.nome-principal {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    color: #00aeff; 
+    font-size: 1.2rem;
+}
+
+.header nav a {
+    color: #f5ebeb;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #00aeff;
+}
+
+.hero-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #f7f7f7;
+    background: rgba(225, 235, 240, 0.089);
+    border: 1px solid rgba(0, 174, 255, 0.384);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-content p {
+    color: #f7dddd;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    background-color: #e8f5ed;
+    color: #010103;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #e3ece7;
+}
+
+.btn-secundario {
+    border: 1px solid #222226;
+    color: #f7f7f7;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background-color: #0c0c0f;
+    border-color: #eaeafc;
+}
+
+.sobre-section {
+    padding: 5rem 5%;
+    max-width: 900px;
+}
+
+.sobre-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sobre-section p {
+    color: #f1e8e8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.infos-localizacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label-info {
+    color: #00aeff; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+}
+
+.valor-info {
+    color: #f7f7f7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.skills-section {
+    padding: 5rem 5%;
+    max-width: 900px;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 1.5rem;
+}
+
+.item-skill {
+    margin-bottom: 1rem;
+}
+
+.nome-skill {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #faf1f1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.barra-container {
+    width: 100%;
+    height: 1px;
+    background-color: #faf7f7; /* Linha de fundo escura */
+    position: relative;
+}
+
+.barra-progresso {
+    height: 1px;
+    background-color: #00aeff; /* Linha de progresso verde */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.barra-progresso-solida { width: 85%; }
+.barra-progresso-progresso { width: 80%; }
+.barra-progresso-aprendizado { width: 65%; }
+.barra-progresso-basico { width: 50%; }
+.barra-progresso-iniciando { width: 35%; }
+
+.projetos {
+    padding: 5rem 5%;
+}
+
+.projetos-header h2 {
+    font-size: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 0.5rem;
+}
+
+.projetos-header p {
+    color: #f8e7e7;
+    margin-bottom: 3rem;
+}
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Estrutura base dos cards de projeto */
+.card1, .card-2, .card-3 {
+    background-color: transparent;
+    border: 1px solid #efefff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.card1:hover, .card-2:hover, .card-3:hover {
+    border-color: #26262b;
+}
+
+.numero-projeto {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    color: #e3ece7;
+}
+
+.card1 h3, .card-2 h3, .card-3 h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.status-projeto {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #00aeff;
+    background: rgba(0, 255, 102, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.card1 p, .card-2 p, .card-3 p {
+    color: #888888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.Footer {
+    margin-top: 8rem;
+    padding: 4rem 5%;
+    border-top: 1px solid #16161a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Footer p:first-child {
+    font-size: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contato-links a {
+    color: #e3f0f7;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contato-links a:hover {
+    color: #f7f7f7;
+}
+
+.copyright {
+    color: #dcdedf;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes Gerais */
+    body {
+        padding: 0 2%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Transforma a localização em uma única coluna no celular */
+    .infos-localizacao {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        column-gap: 0;
+    }
+
+    /* Transforma as barras de skills em uma única coluna no celular */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        row-gap: 1.2rem;
+        column-gap: 0;
+    }
+
+    /* Força os containers de projeto a limparem grades complexas */
+    .projetos {
+        padding: 3rem 2%;
+    }
+
+    .projetos-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Correção Crítica: Impede os cards e os parágrafos de esmagarem na tela */
+    .card1, .card-2, .card-3 {
+        width: 100%;
+        padding: 1.8rem;
+        margin: 0 auto 1.5rem auto;
+        box-sizing: border-box;
+    }
+
+    .card1 p, .card-2 p, .card-3 p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: left;
+        width: 100%;
+    }
+}
