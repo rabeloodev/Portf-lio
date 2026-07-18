@@ -85,6 +85,7 @@ body {
 }
 
 .hero-content p {
+    text-align: justify;
     color: #f7dddd;
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
@@ -137,6 +138,7 @@ body {
 }
 
 .sobre-section p {
+    text-align: justify;
     color: #f1e8e8;
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
@@ -279,7 +281,8 @@ body {
 }
 
 .card1 p, .card-2 p, .card-3 p {
-    color: #888888;
+    text-align: justify;
+    color: #dbd2d2;
     font-size: 0.95rem;
     line-height: 1.6;
 }
